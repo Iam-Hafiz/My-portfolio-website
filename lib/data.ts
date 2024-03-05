@@ -1,4 +1,4 @@
-import tickets1 from "@/public/tickets1.png.png";
+import tickets1 from "@/public/tickets1.png";
 import ecommerce1 from "@/public/ecommerce1.png";
 
 export const links = [

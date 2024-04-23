@@ -24,21 +24,40 @@ export const links = [
   },
 ] as const;
 
-export const projects = [
+export const projectsData = [
   {
     title: "RealTime Tickets management system",
     description:
-      "Improves efficiency, transparency, and accountability in handling customer inquiries and internal requests, leading to enhanced customer satisfaction and organizational productivity...",
-    features: ["User Authentication and Roles", "Ticket Creation", "Ticket Assignment", "Ticket Tracking", "Tickets Filter", "User profile updates", "Avatar upload", "Security and Compliance","Terms & privacy policy"],
+      "Improves efficiency, transparency, and accountability in handling customer inquiries and internal requests, leading to enhanced customer satisfaction and organizational productivity ",
+    siteUrl: "https://ticketting-system.vercel.app/",
+    features: [
+      "User Authentication and Roles",
+      "Ticket Creation",
+      "Ticket Assignment",
+      "Ticket Tracking",
+      "Tickets Filter",
+      "User profile updates",
+      "Avatar upload",
+      "Security and Compliance",
+      "Terms & privacy policy",
+    ],
     tags: ["Next.js", "Supabase", "PostgreSQL", "Tailwind CSS", "JavaScript"],
     imageUrl: tickets1,
   },
   {
     title: "Digital products e-commerce",
     description:
-      "An online platform that facilitates the buying and selling of digital products and services over the internet.",
-    features: ["Product Catalog", "Shopping Cart", "User Accounts", "Search and Navigation", "Product Pages", "Newsletter subscription"],
-    tags: ["JavaScript", "MongoDB", "Express","Node.js", "CSS", "EJS"],
+      "An online platform that facilitates the buying and selling of digital products and services over the internet ",
+    siteUrl: "https://digital-pro.cyclic.app/",
+    features: [
+      "Product Catalog",
+      "Shopping Cart",
+      "User Accounts",
+      "Search and Navigation",
+      "Product Pages",
+      "Newsletter subscription",
+    ],
+    tags: ["JavaScript", "MongoDB", "Express", "Node.js", "CSS", "EJS"],
     imageUrl: ecommerce1,
   },
 ] as const;

@@ -1,5 +1,12 @@
-import tickets1 from "@/public/tickets1.png";
-import ecommerce1 from "@/public/ecommerce1.png";
+
+function imagesUrl(baseUrl: string, qty: number): string[]  {
+  let urls: string[] = []
+  for (let index = 1; index <= qty; index++) {
+    const element = baseUrl + `${index}` + '.png';
+    urls.push(element);
+  }
+  return urls;
+}
 
 export const links = [
   {
@@ -42,7 +49,7 @@ export const projectsData = [
       "Terms & privacy policy",
     ],
     tags: ["Next.js", "Supabase", "PostgreSQL", "Tailwind CSS", "JavaScript"],
-    imageUrl: tickets1,
+    imagesUrl: imagesUrl("/ticket", 14),
   },
   {
     title: "Digital products e-commerce",
@@ -58,9 +65,9 @@ export const projectsData = [
       "Newsletter subscription",
     ],
     tags: ["JavaScript", "MongoDB", "Express", "Node.js", "CSS", "EJS"],
-    imageUrl: ecommerce1,
+    imagesUrl: imagesUrl("/ecommerce", 9),
   },
-] as const;
+];
 
 export const skills = [
   "Next.js",

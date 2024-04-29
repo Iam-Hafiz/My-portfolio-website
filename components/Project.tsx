@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { projectsData } from "@/lib/data";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
+import ImagesSlider from "./ImagesSlider";
 
 type ProjectProps = (typeof projectsData)[number];
 
@@ -11,7 +12,7 @@ export default function Project({
   title,
   description,
   tags,
-  imageUrl,
+  imagesUrl,
   siteUrl,
 }: ProjectProps) {
   const ref = useRef<HTMLDivElement>(null);
@@ -28,7 +29,7 @@ export default function Project({
       style={{
         scale: scaleProgess,
         opacity: opacityProgess,
-      }}
+      }} 
       className="group mb-3 sm:mb-8 last:mb-0"
     >
       <section className="bg-gray-100 max-w-6xl border border-black/5 rounded-lg overflow-hidden relative hover:bg-gray-200 transition dark:text-white dark:bg-white/10 dark:hover:bg-white/20">
@@ -55,15 +56,8 @@ export default function Project({
             ))}
           </ul>
         </div>
-        <div className="m-4 mt-0">
-          <Image
-            src={imageUrl}
-            alt="Web project I developped"
-            quality={95}
-            className=" hidden sm:block rounded-t-lg shadow-2xl 
-                transition 
-                group-hover:scale-[1.03]"
-          />
+        <div className="mt-10 mb-14 pl-4 pr-4">
+          <ImagesSlider imagesUrl={imagesUrl} />
         </div>
       </section>
     </motion.div>

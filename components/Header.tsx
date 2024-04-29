@@ -15,7 +15,12 @@ export default function Header() {
     >
       <nav className="flex justify-between items-center px-2 gap-1">
         {links.map((el) => (
-          <Link key={el.name} href={el.name} className=" p-3 hover:text-blue-600">
+          <Link
+            key={el.name}
+            href={el.name}
+            id={el.name}
+            className=" p-3 hover:text-blue-600"
+          >
             {el.name}
           </Link>
         ))}

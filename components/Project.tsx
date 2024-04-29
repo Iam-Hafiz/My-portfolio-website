@@ -40,7 +40,7 @@ export default function Project({
             <a
               href={siteUrl}
               target="_blank"
-              className=" text-blue-700 hover:text-violet-600 underline font-bold"
+              className=" text-blue-700 hover:text-violet-600 underline"
             >
               Visit the website here.
             </a>

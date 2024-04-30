@@ -29,7 +29,7 @@ export default function Intro() {
             width={128}
             height={128}
             quality={95}
-            className="border-white border-4 rounded-full mt-24 shadow-2xl"
+            className=" border-violet-500 border-4 rounded-full mt-24 shadow-2xl"
           />
           <motion.div
             className=" absolute -left-2 bottom-1 text-4xl "
@@ -42,7 +42,7 @@ export default function Intro() {
         </motion.div>
       </div>
       <motion.p
-        className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl lg:px-24"
+        className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl lg:px-24 text-center"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
@@ -54,7 +54,11 @@ export default function Intro() {
         <strong className="italic"> modern web apps & sites</strong> for{" "}
         <strong className="italic">small</strong> and{" "}
         <strong className="italic">medium </strong> size businesses, i mainly
-        use <span className="underline">Next.js and Tailwind</span>.
+        use{" "}
+        <span className=" font-semibold">
+          Next.js, TypeScript, Tailwind CSS and Supabase
+        </span>
+        .
       </motion.p>
 
       <motion.div
@@ -68,10 +72,10 @@ export default function Intro() {
         <Link
           href="#contact"
           className="group bg-primary text-gray-200 hover:text-gray-100 px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-105 hover:scale-105 active:scale-105 transition"
-            onClick={() => {
+          onClick={() => {
             setActiveSection("Contact");
             setTimeOfLastClick(Date.now());
-          }} 
+          }}
         >
           Contact me
         </Link>

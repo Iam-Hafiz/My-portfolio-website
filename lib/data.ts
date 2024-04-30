@@ -82,6 +82,8 @@ export const skills = [
   "Git",
   "GitHub",
   "Framer Motion",
+  "Laravel",
+  "PHP",
   "CSS",
   "HTML",
 ] as const;

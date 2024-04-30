@@ -29,7 +29,7 @@ export default function Project({
       style={{
         scale: scaleProgess,
         opacity: opacityProgess,
-      }} 
+      }}
       className="group mb-3 sm:mb-2 last:mb-0"
     >
       <section className="bg-gray-100 max-w-6xl border border-black/5 rounded-lg overflow-hidden relative hover:bg-gray-200 transition dark:text-white dark:bg-white/10 dark:hover:bg-white/20">
@@ -48,7 +48,7 @@ export default function Project({
           <ul className="flex flex-wrap mt-4 gap-2 sm:mt-auto">
             {tags.map((tag, index) => (
               <li
-                className="bg-black/[0.7] px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white rounded-full dark:text-white/70"
+                className="bg-white borderBlack rounded-xl px-3 py-1 dark:bg-white dark:text-white uppercase tracking-wider"
                 key={index}
               >
                 {tag}

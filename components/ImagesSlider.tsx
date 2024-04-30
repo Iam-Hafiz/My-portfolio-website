@@ -41,7 +41,7 @@ export default function ImagesSlider({ imagesUrl }: ImagesSliderProps) {
         orientation="vertical"
         className="w-full"
       >
-        <CarouselContent className=" h-[540px]">
+        <CarouselContent className="max-h-[440px] md:max-h-[540px]">
           {imagesUrl.map((url, index) => (
             <CarouselItem key={index} className=" basis-full ">
               <Image
@@ -50,7 +50,7 @@ export default function ImagesSlider({ imagesUrl }: ImagesSliderProps) {
                 width={1840}
                 height={940}
                 quality={95}
-                className=" hidden sm:block rounded-t-lg shadow-2xl 
+                className="rounded-t-lg shadow-2xl 
                 transition 
                 group-hover:scale-[1.01]"
               />

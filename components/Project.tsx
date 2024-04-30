@@ -30,7 +30,7 @@ export default function Project({
         scale: scaleProgess,
         opacity: opacityProgess,
       }} 
-      className="group mb-3 sm:mb-8 last:mb-0"
+      className="group mb-3 sm:mb-2 last:mb-0"
     >
       <section className="bg-gray-100 max-w-6xl border border-black/5 rounded-lg overflow-hidden relative hover:bg-gray-200 transition dark:text-white dark:bg-white/10 dark:hover:bg-white/20">
         <div className="p-4 sm:max-w-[100%] flex flex-col h-full">

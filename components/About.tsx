@@ -4,9 +4,10 @@ import React from "react";
 import { motion } from "framer-motion";
 //import { useSectionInView } from "@/lib/hooks";
 import SectionHeader from "./Section-header";
+import { useSectionInView } from "@/lib/hooks";
 
 export default function About() {
-  //const { ref } = useSectionInView("About");  ref={ref}
+  const { ref } = useSectionInView("About");  
 
   return (
     <motion.section
@@ -15,12 +16,14 @@ export default function About() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.175 }}
       id="about"
+      ref={ref}
     >
       <SectionHeader>About me</SectionHeader>
       <p className="mb-3">
         I studied Computer engineering at university of gezira, I also enrolled
         in a coding bootcamp at 3w academy and learned{" "}
-        <span className="font-medium">full-stack web development</span>.{" "} My core stack is{" "}
+        <span className="font-medium">full-stack web development</span>. My core
+        stack is{" "}
         <span className="font-medium">
           Next.js, TypeScript, Javascript, Supabase, Postgresql, Node.js, and
           MongoDB

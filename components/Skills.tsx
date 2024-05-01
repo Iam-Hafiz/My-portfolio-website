@@ -15,7 +15,7 @@ const Variants = {
     opacity: 1,
     y: 0,
     transition: {
-      delay: 0.07 * index,
+      delay: 0.04 * index,
     },
   }),
 };
@@ -38,9 +38,9 @@ export default function Skills() {
             variants={Variants}
             initial="initial"
             whileInView="animate"
-            viewport={{
+/*             viewport={{
               once: true,
-            }}
+            }} */
             custom={index}
           >
             {skill}

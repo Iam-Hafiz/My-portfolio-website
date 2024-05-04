@@ -20,12 +20,12 @@ export default function About() {
     >
       <SectionHeader>About me</SectionHeader>
       <p className="mb-3">
-        I studied Computer engineering at university of gezira, I also enrolled
-        in a coding bootcamp at 3w academy and learned{" "}
+        I studied Computer engineering at university of gezira in Sudan, I also enrolled
+        in a coding bootcamp at 3w academy in France and learned{" "}
         <span className="font-medium">full-stack web development</span>. My core
         stack is{" "}
         <span className="font-medium">
-          Next.js, TypeScript, Javascript, Supabase, Postgresql, Node.js, and
+          Next.js, TypeScript, Tailwind CSS, Javascript, Supabase, Postgresql, Node.js, and
           MongoDB
         </span>
         . I am always looking to learn new technologies. I am currently looking

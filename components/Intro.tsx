@@ -29,7 +29,7 @@ export default function Intro() {
             width={128}
             height={128}
             quality={95}
-            className=" border-violet-500 border-4 rounded-full mt-24 shadow-2xl"
+            className=" border-violet-500 border-4 rounded-full shadow-2xl mt-28"
           />
           <motion.div
             className=" absolute -left-2 bottom-1 text-4xl "

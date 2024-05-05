@@ -17,8 +17,7 @@ export default function Contact() {
     const [email, setEmail] = useState("");
     const [subject, setSubject] = useState("");
     const [message, setMessage] = useState("");
-    //const [checkbox, setCheckbox] = useState("");
-
+    
     type initialStateProps = {
       message: string;
       errors: {

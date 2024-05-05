@@ -64,7 +64,7 @@ export const projectsData = [
       "Product Pages",
       "Newsletter subscription",
     ],
-    tags: ["JavaScript", "MongoDB", "Express", "Node.js", "CSS", "EJS"],
+    tags: ["JavaScript", "MongoDB", "Express", "Node.js", "CSS", "EJS", "Jquery"],
     imagesUrl: imagesUrl("/ecommerce", 9),
   },
 ];
@@ -86,4 +86,6 @@ export const skills = [
   "PHP",
   "CSS",
   "HTML",
+  "Jquery",
+  "Bootstrap",
 ] as const;

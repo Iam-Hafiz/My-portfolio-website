@@ -12,7 +12,7 @@ export default function Header() {
     useActiveSectionContext();
   return (
     <motion.header
-      className=" max-w-md z-50 fixed left-1/2 top-4 rounded-full bg-white border-white bg-opacity-80 border-opacity-70 backdrop-blur-3xl shadow-lg"
+      className=" max-w-md z-50 fixed left-1/2 top-12 rounded-full bg-white border-white bg-opacity-80 border-opacity-70 backdrop-blur-3xl shadow-lg"
       initial={{ y: -100, x: "-50%", opacity: 0 }}
       animate={{ y: 0, x: "-50%", opacity: 1 }}
     >
@@ -24,7 +24,8 @@ export default function Header() {
             className={clsx(
               "relative p-3 hover:text-gray-950 transition dark:text-gray-500 dark:hover:text-gray-300",
               {
-                "text-primary dark:text-gray-200 font-bold": activeSection === el.name,
+                "text-primary dark:text-gray-200 font-bold":
+                  activeSection === el.name,
               }
             )}
             onClick={() => {

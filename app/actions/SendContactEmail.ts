@@ -3,41 +3,7 @@
 import React from "react";
 import { Resend } from "resend";
 import ContactEmail from "../emails/ContactEmail";
-import { z } from "zod";
-import { getErrorMessage } from "@/lib/utils";
-
-const resend = new Resend(`${process.env.RESEND_API_KEY}`);
-const ContactSchema = z.object({
-  fullName: z
-    .string()
-    .trim()
-    .toLowerCase()
-    .min(2, { message: "full name must contain at least 2 character(s)" })
-    .max(100, { message: "full name must contain at most 100 character(s)" }),
-  email: z
-    .string()
-    .trim()
-    .toLowerCase()
-    .email({ message: "Invalid email address" })
-    .min(5, { message: "Email must contain at least 5 character(s)" })
-    .max(100, { message: "Email must contain at most 100 character(s)" }),
-  subject: z
-    .string()
-    .trim()
-    .toLowerCase()
-    .min(50, { message: "Subject must contain at least 50 character(s)" })
-    .max(1000, {
-      message: "Subject must contain at most 1000 character(s)",
-    }),
-  message: z
-    .string()
-    .trim()
-    .toLowerCase()
-    .min(50, { message: "Message must contain at least 50 character(s)" })
-    .max(1000, {
-      message: "Message must contain at most 1000 character(s)",
-    }),
-});
+import { capitalizeFirstLetter, ContactSchema, getErrorMessage } from "@/lib/utils";
 
 const sendEmail = async (prevState: any, formData: FormData) => {
   const rawFormData = Object.fromEntries(formData.entries());
@@ -45,16 +11,16 @@ const sendEmail = async (prevState: any, formData: FormData) => {
   if (!validatedFields.success) {
     return {
       errors: validatedFields.error.flatten().fieldErrors,
-      message: "Please refill the fields correctly and try again!",
+      message: "",
     };
   }
   const { fullName, email, subject, message } = validatedFields.data;
-  let data;
+  const resend = new Resend(process.env.RESEND_API_KEY);
   try {
-    data = await resend.emails.send({
-      from: `${fullName}` + "<onboarding@resend.dev>",
-      to: "bytegrad@gmail.com",
-      subject: subject,
+    const { data, error } = await resend.emails.send({
+      from: `${capitalizeFirstLetter(fullName)}` + "<onboarding@resend.dev>",
+      to: "hafizdotteck@gmail.com",
+      subject: capitalizeFirstLetter(subject),
       reply_to: email,
       react: React.createElement(ContactEmail, {
         fullName,
@@ -63,16 +29,27 @@ const sendEmail = async (prevState: any, formData: FormData) => {
         message,
       }),
     });
+    // data is null or an object with id prop 
+    // error is null or an object with message prop
+
+    if(!data){ 
+         return {
+           errors: {},
+           message:
+             "Could not sent message, Something went wrong!",
+         }; 
+    }
+
   } catch (error: unknown) {
     return {
       errors: {},
       message: getErrorMessage(error),
     };
   }
-  console.log("data:", data);
   return {
     errors: {},
-    message: "Sent successfully!",
+    message:
+      "Sent successfully congratulations! I'll reply soon, thank you",
   };
 };
 

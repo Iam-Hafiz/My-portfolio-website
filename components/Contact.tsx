@@ -10,12 +10,14 @@ import SubmitBtn from "./SubmitBtn";
 import TermsCheckbox from "./TermsCheckbox";
 import { useFormState } from "react-dom";
 import { sendEmail } from "@/app/actions/SendContactEmail";
+import { Smile } from "lucide-react";
 
 export default function Contact() {
     const [fullName, setFullName] = useState("");
     const [email, setEmail] = useState("");
     const [subject, setSubject] = useState("");
     const [message, setMessage] = useState("");
+    //const [checkbox, setCheckbox] = useState("");
 
     type initialStateProps = {
       message: string;
@@ -24,6 +26,7 @@ export default function Contact() {
         email: string[] | undefined;
         subject: string[] | undefined;
         message: string[] | undefined;
+        checkbox: string[] | undefined;
       };
     };
       const initialState: initialStateProps = {
@@ -32,11 +35,20 @@ export default function Contact() {
         fullName: [],
         email: [],
         subject: [],
-        message: [],},
+        message: [],
+        checkbox: [],},
       };
     const [state, dispatch] = useFormState(sendEmail, initialState);
     const { ref } = useSectionInView("Contact");
-
+    
+    if (state.message.includes("successfully")) {
+      setTimeout(() => {
+        setFullName("")
+        setEmail("")
+        setSubject("")
+        setMessage("")
+      }, 1000);
+    }
   return (
     <motion.section
       id="contact"
@@ -44,7 +56,7 @@ export default function Contact() {
       className="mb-12 w-[min(100%,40rem)] "
       initial={{
         opacity: 0,
-        y: "50%",
+        y: "100%",
       }}
       whileInView={{
         opacity: 1,
@@ -55,13 +67,10 @@ export default function Contact() {
       }}
     >
       <SectionHeader>Contact me</SectionHeader>
-      <p className=" dark:text-white/80 ">
+      <p className=" dark:text-white/80 hidden">
         You may contact me directly at{" "}
-        <a
-          className="underline text-blue-600"
-          href="mailto:hafadam13@gmail.com"
-        >
-          hafadam13@gmail.com
+        <a className="underline text-blue-600" href="mailto:someone@gmail.com">
+          someone@gmail.com
         </a>{" "}
         or through this form.
       </p>
@@ -74,7 +83,6 @@ export default function Contact() {
           onChange={(e) => {
             setFullName(e.target.value);
           }}
-          autoFocus
           aria-describedby="fullNameErr"
         />
         <div id="fullNameErr" aria-live="polite" aria-atomic="true">
@@ -95,6 +103,14 @@ export default function Contact() {
           }}
           aria-describedby="emailErr"
         />
+        <div id="emailErr" aria-live="polite" aria-atomic="true">
+          {state.errors?.email &&
+            state.errors?.email.map((error) => (
+              <p className="formErrors" key={error}>
+                {error}
+              </p>
+            ))}
+        </div>
         <Input
           type="text"
           name="subject"
@@ -105,6 +121,14 @@ export default function Contact() {
           }}
           aria-describedby="subjectErr"
         />
+        <div id="subjectErr" aria-live="polite" aria-atomic="true">
+          {state.errors?.subject &&
+            state.errors?.subject.map((error) => (
+              <p className="formErrors" key={error}>
+                {error}
+              </p>
+            ))}
+        </div>
         <Textarea
           className=" min-h-24 sm:min-h-48"
           placeholder="Type your message here."
@@ -115,8 +139,32 @@ export default function Contact() {
           }}
           aria-describedby="messageErr"
         />
+        <div id="messageErr" aria-live="polite" aria-atomic="true">
+          {state.errors?.message &&
+            state.errors?.message.map((error) => (
+              <p className="formErrors" key={error}>
+                {error}
+              </p>
+            ))}
+        </div>
         <TermsCheckbox />
-        <SubmitBtn initValue={"Send message"} loadingValue={"Sending..."} />
+        <div id="checkboxErr" aria-live="polite" aria-atomic="true">
+          {state.errors?.checkbox &&
+            state.errors?.checkbox.map((error) => (
+              <p className="formErrors" key={error}>
+                {error}
+              </p>
+            ))}
+        </div>
+        {state.message?.includes("successfully") && (
+          <p className=" flex justify-center items-center text-green-700">
+            {" "}
+            <Smile /> <span className=" pl-1">{state.message}</span>
+          </p>
+        )}
+        <div className=" flex justify-center items-center">
+          <SubmitBtn initValue={"Send message"} loadingValue={"Sending..."} />
+        </div>
       </form>
     </motion.section>
   );

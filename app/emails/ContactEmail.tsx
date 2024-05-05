@@ -10,6 +10,7 @@ import {
   Text,
 } from "@react-email/components";
 import { Tailwind } from "@react-email/tailwind";
+import { capitalizeFirstLetter } from "@/lib/utils";
 
 type ContactEmailProps = {
   fullName: string;
@@ -27,18 +28,20 @@ export default function ContactEmail({
   return (
     <Html>
       <Head>
-        {" "}
-        <title>{subject}</title>
       </Head>
       <Preview>New customer from my portfolio site</Preview>
       <Tailwind>
-        <Body className="bg-gray-200 text-black">
+        <Head>
+          {" "}
+          <title>{capitalizeFirstLetter(subject)}</title>
+        </Head>
+        <Body className="bg-gray-100 dark:bg-indigo-900 dark:text-slate-200 text-black p-2">
           <Container>
-            <Section className=" bg-slate-100 p-4 rounded-md max-w-xl">
-              <Text>{message}</Text>
+            <Section className=" bg-white dark:bg-indigo-800 p-1 max-w-screen-2xl">
+              <Text>{capitalizeFirstLetter(message)}</Text>
               <Hr />
-              <Text>{fullName}</Text>
-              <Text className=" text-blue-700">{email}</Text>
+              <Text>{capitalizeFirstLetter(fullName)}</Text>
+              <Text className=" text-blue-800">{email}</Text>
             </Section>
           </Container>
         </Body>

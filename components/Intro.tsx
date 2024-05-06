@@ -1,10 +1,10 @@
 "use client"
 import React from 'react'
-import avatar from "@/public/95.jpg";
+import avatar from "@/public/profile-sunset.png";
 import Image from 'next/image';
 import { motion } from "framer-motion";
 import Link from 'next/link';
-import { ArrowDownToLine, Github, Linkedin } from 'lucide-react';
+import { ArrowDownToLine, Github} from 'lucide-react';
 import { useSectionInView } from '@/lib/hooks';
 import { useActiveSectionContext } from '@/app/context/active-section-context';
 
@@ -29,7 +29,7 @@ export default function Intro() {
             width={128}
             height={128}
             quality={95}
-            className=" border-violet-500 dark:border-slate-800 border-4 rounded-full shadow-2xl mt-28"
+            className=" border-violet-500 dark:border-slate-800 border-4 rounded-full shadow-2xl mt-40 sm:mt-28"
           />
           <motion.div
             className=" absolute -left-2 bottom-1 text-4xl "
@@ -88,15 +88,6 @@ export default function Intro() {
           Download my resume / CV
           <ArrowDownToLine />
         </a>
-
-        <a
-          className="bg-primary p-4 text-gray-200 hover:text-gray-100  flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
-          href="https://www.linkedin.com/in/hafizadam"
-          target="_blank"
-        >
-          <Linkedin />
-        </a>
-
         <a
           className="bg-primary p-4 text-gray-200 hover:text-gray-100  flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
           href="https://github.com/Iam-Hafiz"

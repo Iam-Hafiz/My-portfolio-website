@@ -48,7 +48,14 @@ export const projectsData = [
       "Security and Compliance",
       "Terms & privacy policy",
     ],
-    tags: ["Next.js", "Supabase", "PostgreSQL", "Tailwind CSS", "JavaScript"],
+    tags: [
+      "Next.js",
+      "Supabase",
+      "PostgreSQL",
+      "Tailwind CSS",
+      "JavaScript",
+      "Framer Motion",
+    ],
     imagesUrl: imagesUrl("/ticket", 14),
   },
   {
@@ -64,7 +71,16 @@ export const projectsData = [
       "Product Pages",
       "Newsletter subscription",
     ],
-    tags: ["JavaScript", "MongoDB", "Express", "Node.js", "CSS", "EJS", "Jquery"],
+    tags: [
+      "JavaScript",
+      "MongoDB",
+      "Express",
+      "Node.js",
+      "CSS",
+      "EJS",
+      "Jquery",
+      "Bootstrap",
+    ],
     imagesUrl: imagesUrl("/ecommerce", 9),
   },
 ];

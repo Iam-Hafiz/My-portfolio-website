@@ -2,7 +2,6 @@
 
 import { useRef } from "react";
 import { projectsData } from "@/lib/data";
-import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import ImagesSlider from "./ImagesSlider";
 
@@ -48,7 +47,7 @@ export default function Project({
           <ul className="flex flex-wrap mt-4 gap-2 sm:mt-auto">
             {tags.map((tag, index) => (
               <li
-                className="bg-white rounded-xl px-3 py-1 dark:bg-white/10 uppercase tracking-wider"
+                className="bg-white rounded-xl px-3 py-1 dark:bg-white/10 uppercase tracking-wider shadow-lg"
                 key={index}
               >
                 {tag}

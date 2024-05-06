@@ -14,7 +14,7 @@ export function ModeToggle() {
     }
   return (
     <motion.div
-      className=" fixed top-1 z-50 flex justify-center items-center"
+      className=" fixed top-1 z-50 flex justify-center items-center "
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
     >
@@ -24,7 +24,7 @@ export function ModeToggle() {
         onClick={handleClick}
         className="rounded-full relative dark:text-white h-[2.25rem] w-[2.25rem]"
       >
-        <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+        <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0 " />
         <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
         <span className="sr-only">Toggle theme</span>
       </Button>

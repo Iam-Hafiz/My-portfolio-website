@@ -52,7 +52,7 @@ export default function Contact() {
     <motion.section
       id="contact"
       ref={ref}
-      className="mb-12 w-[min(100%,40rem)] "
+      className="w-[min(100%,40rem)]"
       initial={{
         opacity: 0,
         scale: 0.5,

@@ -29,7 +29,7 @@ export default function Intro() {
             width={128}
             height={128}
             quality={95}
-            className=" border-violet-500 border-4 rounded-full shadow-2xl mt-28"
+            className=" border-violet-500 dark:border-slate-800 border-4 rounded-full shadow-2xl mt-28"
           />
           <motion.div
             className=" absolute -left-2 bottom-1 text-4xl "
@@ -71,7 +71,7 @@ export default function Intro() {
       >
         <Link
           href="#contact"
-          className="group bg-primary text-gray-200 hover:text-gray-100 px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-105 hover:scale-105 active:scale-105 transition"
+          className="group bg-primary dark:bg-white/10 text-gray-200 hover:text-gray-100 px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-105 hover:scale-105 active:scale-105 transition"
           onClick={() => {
             setActiveSection("Contact");
             setTimeOfLastClick(Date.now());

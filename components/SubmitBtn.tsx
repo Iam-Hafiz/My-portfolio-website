@@ -11,7 +11,11 @@ export default function SubmitBtn({ initValue, loadingValue }: SubmitBtnProps) {
   const { pending } = useFormStatus();
 
   return (
-    <Button type="submit" aria-disabled={pending} className=" w-1/2 sm:w-full">
+    <Button
+      type="submit"
+      aria-disabled={pending}
+      className=" w-1/2 sm:w-6/12 dark:bg-white/10 dark:hover:bg-white/15 hover:scale-105 transition-all"
+    >
       {pending ? (
         <>
           <Loader2 className="mr-2 h-4 w-4 animate-spin" />

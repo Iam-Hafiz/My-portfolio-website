@@ -9,7 +9,7 @@ import SectionHeader from "./Section-header";
 const Variants = {
   initial: {
     opacity: 0,
-    y: 100,
+    y: "100%",
   },
   animate: (index: number) => ({
     opacity: 1,
@@ -38,9 +38,9 @@ export default function Skills() {
             variants={Variants}
             initial="initial"
             whileInView="animate"
-/*             viewport={{
+            viewport={{
               once: true,
-            }} */
+            }}
             custom={index}
           >
             {skill}

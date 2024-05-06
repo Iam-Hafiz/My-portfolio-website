@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning className="!scroll-smooth">
       <body
-        className={`${inter.className} bg-gray-50 text-gray-950 relative mx-auto`}
+        className={`${inter.className} text-gray-950  dark:text-gray-300  bg-gradient-to-r from-indigo-100 via-purple-100 to-violet-100 dark:from-slate-900 dark:via-gray-900 dark:to-slate-900 relative mx-auto`}
       >
         <ThemeProvider
           attribute="class"
@@ -29,11 +29,11 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="bg-[#fbe2e3] absolute top-[-6rem] -z-10 right-[11rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] dark:bg-[#946263]"></div>
+          <div className="bg-[#fbe2e3] absolute top-[-6rem] -z-10 right-[11rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] dark:bg-[#693e3e]"></div>
           <div
             className="bg-[#dbd7fb] absolute top-[-1rem] -z-10 left-[-35rem] h-[31.25rem] w-[50rem] 
         rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 
-        2xl:left-[-5rem] dark:bg-[#676394]"
+        2xl:left-[-5rem] dark:bg-[#2b2752]"
           ></div>
           <ActiveSectionContextProvider>
             <Header />

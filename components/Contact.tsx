@@ -55,14 +55,14 @@ export default function Contact() {
       className="mb-12 w-[min(100%,40rem)] "
       initial={{
         opacity: 0,
-        y: "100%",
+        scale: 0.5,
       }}
       whileInView={{
         opacity: 1,
-        y: 0,
+        scale: 1,
       }}
       transition={{
-        duration: 0.5,
+        duration: 1,
       }}
     >
       <SectionHeader>Contact me</SectionHeader>

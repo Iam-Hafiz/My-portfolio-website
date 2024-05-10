@@ -18,8 +18,8 @@ const sendEmail = async (prevState: any, formData: FormData) => {
   const resend = new Resend(process.env.RESEND_API_KEY);
   try {
     const { data, error } = await resend.emails.send({
-      from: `${capitalizeFirstLetter(fullName)}` + "<onboarding@resend.dev>",
-      to: "hafizdotteck@gmail.com",
+      from: `${capitalizeFirstLetter(fullName)}` + `<${process.env.RESEND_DOMAIN}>`,
+      to: process.env.My_EMAIL as string,
       subject: capitalizeFirstLetter(subject),
       reply_to: email,
       react: React.createElement(ContactEmail, {
@@ -32,7 +32,7 @@ const sendEmail = async (prevState: any, formData: FormData) => {
     // data is null or an object with id prop 
     // error is null or an object with message prop
 
-    if(!data){ 
+    if(!data || error){ 
          return {
            errors: {},
            message:

@@ -14,7 +14,7 @@ export default function SubmitBtn({ initValue, loadingValue }: SubmitBtnProps) {
     <Button
       type="submit"
       aria-disabled={pending}
-      className=" w-1/2 sm:w-6/12 dark:bg-white/10 dark:hover:bg-white/15 hover:scale-105 transition-all shadow-xl"
+      className=" w-1/2 sm:w-6/12 dark:bg-white/10 dark:hover:bg-white/15 hover:scale-105 transition-all shadow-lg"
     >
       {pending ? (
         <>

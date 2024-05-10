@@ -4,6 +4,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import SectionHeader from "./Section-header";
 import { useSectionInView } from "@/lib/hooks";
+import { ArrowDownToLine } from "lucide-react";
 
 export default function About() {
   const { ref } = useSectionInView("About");  
@@ -37,6 +38,16 @@ export default function About() {
         video games and watching football games with friends. I also enjoy{" "}
         <span className="font-medium">learning new things </span>.
       </p>
+      <div className="flex flex-col sm:flex-row items-center justify-center gap-2 px-4 text-lg font-medium mt-4">
+        <a
+          className="group bg-primary text-gray-200 hover:text-gray-100  px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-105 hover:scale-105 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
+          href="/Front-end-CV-Hafiz.pdf"
+          download
+        >
+          Download resume / CV
+          <ArrowDownToLine />
+        </a>
+      </div>
     </motion.section>
   );
 }

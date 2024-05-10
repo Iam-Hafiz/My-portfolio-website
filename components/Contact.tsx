@@ -52,7 +52,7 @@ export default function Contact() {
     <motion.section
       id="contact"
       ref={ref}
-      className="w-[min(100%,40rem)]"
+      className="w-[min(100%,40rem)] mb-4 sm:my-4"
       initial={{
         opacity: 0,
         scale: 0.5,
@@ -66,14 +66,14 @@ export default function Contact() {
       }}
     >
       <SectionHeader>Contact me</SectionHeader>
-      <p className=" dark:text-white/80 hidden">
+{/*       <p className=" dark:text-white/80 hidden">
         You may contact me directly at{" "}
         <a className="underline text-blue-600" href="mailto:someone@gmail.com">
           someone@gmail.com
         </a>{" "}
         or through this form.
-      </p>
-      <form action={dispatch} className="grid w-full gap-2 mt-4">
+      </p> */}
+      <form action={dispatch} className="grid w-full gap-2 mt-4 p-4 shadow-inner">
         <Input
           type="text"
           name="fullName"
@@ -83,6 +83,7 @@ export default function Contact() {
             setFullName(e.target.value);
           }}
           aria-describedby="fullNameErr"
+          className=" shadow-md"
         />
         <div id="fullNameErr" aria-live="polite" aria-atomic="true">
           {state.errors?.fullName &&
@@ -101,6 +102,7 @@ export default function Contact() {
             setEmail(e.target.value);
           }}
           aria-describedby="emailErr"
+          className=" shadow-md"
         />
         <div id="emailErr" aria-live="polite" aria-atomic="true">
           {state.errors?.email &&
@@ -119,6 +121,7 @@ export default function Contact() {
             setSubject(e.target.value);
           }}
           aria-describedby="subjectErr"
+          className=" shadow-md"
         />
         <div id="subjectErr" aria-live="polite" aria-atomic="true">
           {state.errors?.subject &&
@@ -129,7 +132,6 @@ export default function Contact() {
             ))}
         </div>
         <Textarea
-          className=" min-h-24 sm:min-h-48"
           placeholder="Type your message here."
           name="message"
           value={message}
@@ -137,6 +139,7 @@ export default function Contact() {
             setMessage(e.target.value);
           }}
           aria-describedby="messageErr"
+          className=" min-h-24 sm:min-h-48 shadow-md"
         />
         <div id="messageErr" aria-live="polite" aria-atomic="true">
           {state.errors?.message &&

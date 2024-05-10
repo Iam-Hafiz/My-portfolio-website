@@ -4,7 +4,6 @@ import avatar from "@/public/profile-sunset.png";
 import Image from 'next/image';
 import { motion } from "framer-motion";
 import Link from 'next/link';
-import { ArrowDownToLine, Github} from 'lucide-react';
 import { useSectionInView } from '@/lib/hooks';
 import { useActiveSectionContext } from '@/app/context/active-section-context';
 
@@ -53,10 +52,10 @@ export default function Intro() {
         I enjoy building{" "}
         <strong className="italic"> modern web apps & sites</strong> for{" "}
         <strong className="italic">small</strong> and{" "}
-        <strong className="italic">medium </strong> size businesses, i mainly
-        use{" "}
+        <strong className="italic">medium </strong> size businesses, i currently focus on
+        {" "}
         <span className=" font-semibold">
-          Next.js, TypeScript, Tailwind CSS and Supabase
+          Next.js/React, TypeScript/JavaScript, Tailwind CSS, PostgreSQL and Supabase
         </span>
         .
       </motion.p>
@@ -79,22 +78,6 @@ export default function Intro() {
         >
           Contact me
         </Link>
-
-        <a
-          className="group bg-primary text-gray-200 hover:text-gray-100  px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-105 hover:scale-105 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
-          href="/Front-end-CV-Hafiz.pdf"
-          download
-        >
-          Download my resume / CV
-          <ArrowDownToLine />
-        </a>
-        <a
-          className="bg-primary p-4 text-gray-200 hover:text-gray-100  flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
-          href="https://github.com/Iam-Hafiz"
-          target="_blank"
-        >
-          <Github />
-        </a>
       </motion.div>
     </section>
   );

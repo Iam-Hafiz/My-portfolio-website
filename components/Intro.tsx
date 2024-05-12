@@ -28,7 +28,7 @@ export default function Intro() {
             width={128}
             height={128}
             quality={95}
-            className=" border-violet-500 dark:border-slate-800 border-4 rounded-full shadow-2xl mt-40 sm:mt-28"
+            className=" border-violet-500 dark:border-slate-800 border-4 rounded-full shadow-2xl mt-40 sm:mt-28 hover:scale-105 transition-all"
           />
           <motion.div
             className=" absolute -left-2 bottom-1 text-4xl "
@@ -52,10 +52,11 @@ export default function Intro() {
         I enjoy building{" "}
         <strong className="italic"> modern web apps & sites</strong> for{" "}
         <strong className="italic">small</strong> and{" "}
-        <strong className="italic">medium </strong> size businesses, i currently focus on
-        {" "}
+        <strong className="italic">medium </strong> size businesses, i currently
+        focus on{" "}
         <span className=" font-semibold">
-          Next.js/React, TypeScript/JavaScript, Tailwind CSS, PostgreSQL and Supabase
+          Next.js/React, TypeScript/JavaScript, Tailwind CSS, PostgreSQL and
+          Supabase
         </span>
         .
       </motion.p>
@@ -70,7 +71,7 @@ export default function Intro() {
       >
         <Link
           href="#contact"
-          className="group bg-primary dark:bg-white/10 text-gray-200 hover:text-gray-100 px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-105 hover:scale-105 active:scale-105 transition"
+          className="group bg-primary dark:bg-black text-gray-200 hover:text-gray-100 dark:hover:bg-gray-950 px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-105 hover:scale-105 active:scale-105 transition"
           onClick={() => {
             setActiveSection("Contact");
             setTimeOfLastClick(Date.now());

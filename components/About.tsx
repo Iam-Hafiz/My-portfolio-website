@@ -40,7 +40,7 @@ export default function About() {
       </p>
       <div className="flex flex-col sm:flex-row items-center justify-center gap-2 px-4 text-lg font-medium mt-4">
         <a
-          className="group bg-primary text-gray-200 hover:text-gray-100  px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-105 hover:scale-105 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
+          className="group bg-primary text-gray-200 hover:text-gray-100 dark:hover:bg-gray-950 px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-105 hover:scale-105 active:scale-105 transition cursor-pointer dark:bg-black"
           href="/Front-end-CV-Hafiz.pdf"
           download
         >

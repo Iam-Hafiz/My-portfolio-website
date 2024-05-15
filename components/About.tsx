@@ -25,10 +25,10 @@ export default function About() {
         <span className="font-medium">full-stack web development</span>. My core
         stack is{" "}
         <span className="font-medium">
-          Next.js, TypeScript, Tailwind CSS, Javascript, Supabase, Postgresql,
+          Next.js, React, TypeScript, Tailwind CSS, Javascript, Supabase, Postgresql,
           Node.js, and MongoDB
         </span>
-        . I am always looking to learn new technologies. I am currently looking
+        . I enjoy learning new technologies. I am currently looking
         for a <span className="font-medium">full-time position</span> as a
         software developer.
       </p>

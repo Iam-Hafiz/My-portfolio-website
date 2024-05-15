@@ -12,13 +12,13 @@ export default function Intro() {
     const { ref } = useSectionInView("Home", 0.5);
     const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
   return (
-    <section className=" ">
+    <section>
       <div className=" flex justify-center items-center">
         <motion.div
           className=" relative flex justify-center items-center"
           initial={{ scale: 0.5, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.8 }}
           ref={ref}
         >
           <Image
@@ -41,24 +41,24 @@ export default function Intro() {
         </motion.div>
       </div>
       <motion.p
-        className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl lg:px-24 text-center"
+        className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-3xl lg:px-16 text-center"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.3, delay: 0.3 }}
       >
-        <span className="font-bold">Hello, I'm Hafiz,</span> I'm a{" "}
-        <span className="font-bold">full-stack web developer.</span>
-        {/*  with{" "}
-        <span className="font-bold">8 years</span> of experience. */}{" "}
-        I enjoy building{" "}
-        <strong className="italic"> modern web apps & sites</strong> for{" "}
-        <strong className="italic">small</strong> and{" "}
-        <strong className="italic">medium </strong> size businesses, i currently
-        focus on{" "}
+        <span className="font-bold">Hello, I'm Hafiz,</span> I enjoy building{" "}
+        <strong className="italic"> modern web apps and sites</strong>. As a
+        front-end developer, I specialize in creating appealing and
+        user-friendly websites. My expertise lies in HTML, CSS, and JavaScript,
+        and I’m well-versed in frameworks like{" "}
         <span className=" font-semibold">
-          Next.js/React, TypeScript/JavaScript, Tailwind CSS, PostgreSQL and
-          Supabase
-        </span>
-        .
+          Next.js, React, Tailwind CSS and TypeScript
+        </span>{" "}
+        . Whether it’s designing a clean and intuitive interface or ensuring
+        responsiveness across all devices, I’m committed to delivering{" "}
+        <span className="font-bold">high-quality</span> work. If you have any
+        specific project requirements, feel free to share them, and I’ll be
+        happy to assist!😊👌.
       </motion.p>
 
       <motion.div
